@@ -3,11 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		135F79D3DA355E5DB06173CC /* Pods_SimpleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E428CAD5D1FFD29AE5A8C2 /* Pods_SimpleAppTests.framework */; };
+		595F5DCA26192088009A4B38 /* FetcherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F5DC926192088009A4B38 /* FetcherProtocol.swift */; };
+		595F5DD9262A064D009A4B38 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F5DD7262A064D009A4B38 /* PlayerViewController.swift */; };
+		595F5DDA262A064D009A4B38 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 595F5DD8262A064D009A4B38 /* PlayerViewController.xib */; };
+		59692B702617C9D900A67D3D /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59692B6F2617C9D900A67D3D /* Manager.swift */; };
+		59692B742617C9F700A67D3D /* songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 59692B732617C9F700A67D3D /* songs.json */; };
+		59692B792617CA2600A67D3D /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59692B772617CA2600A67D3D /* SongTableViewCell.swift */; };
+		59692B7A2617CA2600A67D3D /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59692B782617CA2600A67D3D /* SongTableViewCell.xib */; };
+		59692B7F2617CA5B00A67D3D /* SongsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59692B7D2617CA5B00A67D3D /* SongsListTableViewController.swift */; };
+		59692B802617CA5B00A67D3D /* SongsListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59692B7E2617CA5B00A67D3D /* SongsListTableViewController.xib */; };
 		641AD20475F1347D371412B3 /* Pods_SimpleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8E88ECA98F224F18523F33 /* Pods_SimpleApp.framework */; };
 		EC15801925B7501C0000B4A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15801825B7501C0000B4A6 /* AppDelegate.swift */; };
 		EC15801B25B7501C0000B4A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15801A25B7501C0000B4A6 /* SceneDelegate.swift */; };
@@ -36,6 +45,15 @@
 		06A07FE538095D57E5349C72 /* Pods-SimpleAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleAppTests.release.xcconfig"; path = "Target Support Files/Pods-SimpleAppTests/Pods-SimpleAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A8E88ECA98F224F18523F33 /* Pods_SimpleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		430E0DBA358264B31A37B66B /* Pods-SimpleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleApp/Pods-SimpleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		595F5DC926192088009A4B38 /* FetcherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherProtocol.swift; sourceTree = "<group>"; };
+		595F5DD7262A064D009A4B38 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		595F5DD8262A064D009A4B38 /* PlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
+		59692B6F2617C9D900A67D3D /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		59692B732617C9F700A67D3D /* songs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = songs.json; sourceTree = "<group>"; };
+		59692B772617CA2600A67D3D /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		59692B782617CA2600A67D3D /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
+		59692B7D2617CA5B00A67D3D /* SongsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsListTableViewController.swift; sourceTree = "<group>"; };
+		59692B7E2617CA5B00A67D3D /* SongsListTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongsListTableViewController.xib; sourceTree = "<group>"; };
 		75E428CAD5D1FFD29AE5A8C2 /* Pods_SimpleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD63752B1D27581E969501B1 /* Pods-SimpleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleApp/Pods-SimpleApp.release.xcconfig"; sourceTree = "<group>"; };
 		EB12C112F5411A4E69141D32 /* Pods-SimpleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleAppTests/Pods-SimpleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,14 +139,23 @@
 		EC15801725B7501C0000B4A6 /* SimpleApp */ = {
 			isa = PBXGroup;
 			children = (
-				EC15807725B7568B0000B4A6 /* main.swift */,
 				EC15801825B7501C0000B4A6 /* AppDelegate.swift */,
+				EC15802125B7501F0000B4A6 /* Assets.xcassets */,
+				EC15802625B7501F0000B4A6 /* Info.plist */,
+				EC15802325B7501F0000B4A6 /* LaunchScreen.storyboard */,
+				EC15807725B7568B0000B4A6 /* main.swift */,
+				59692B6F2617C9D900A67D3D /* Manager.swift */,
+				595F5DC926192088009A4B38 /* FetcherProtocol.swift */,
 				EC15801A25B7501C0000B4A6 /* SceneDelegate.swift */,
+				59692B732617C9F700A67D3D /* songs.json */,
+				59692B7D2617CA5B00A67D3D /* SongsListTableViewController.swift */,
+				595F5DD7262A064D009A4B38 /* PlayerViewController.swift */,
+				595F5DD8262A064D009A4B38 /* PlayerViewController.xib */,
+				59692B7E2617CA5B00A67D3D /* SongsListTableViewController.xib */,
+				59692B772617CA2600A67D3D /* SongTableViewCell.swift */,
+				59692B782617CA2600A67D3D /* SongTableViewCell.xib */,
 				EC15801C25B7501C0000B4A6 /* ViewController.swift */,
 				EC15806725B754340000B4A6 /* ViewController.xib */,
-				EC15802125B7501F0000B4A6 /* Assets.xcassets */,
-				EC15802325B7501F0000B4A6 /* LaunchScreen.storyboard */,
-				EC15802625B7501F0000B4A6 /* Info.plist */,
 			);
 			path = SimpleApp;
 			sourceTree = "<group>";
@@ -165,6 +192,7 @@
 				EC15801125B7501C0000B4A6 /* Sources */,
 				EC15801225B7501C0000B4A6 /* Frameworks */,
 				EC15801325B7501C0000B4A6 /* Resources */,
+				66B2586D6DB6568774667078 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,8 +264,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59692B7A2617CA2600A67D3D /* SongTableViewCell.xib in Resources */,
+				595F5DDA262A064D009A4B38 /* PlayerViewController.xib in Resources */,
+				59692B742617C9F700A67D3D /* songs.json in Resources */,
 				EC15802525B7501F0000B4A6 /* LaunchScreen.storyboard in Resources */,
 				EC15802225B7501F0000B4A6 /* Assets.xcassets in Resources */,
+				59692B802617CA5B00A67D3D /* SongsListTableViewController.xib in Resources */,
 				EC15806825B754340000B4A6 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +284,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		66B2586D6DB6568774667078 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleApp/Pods-SimpleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleApp/Pods-SimpleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleApp/Pods-SimpleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B93F58277126F75F2CEF89CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,10 +370,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59692B792617CA2600A67D3D /* SongTableViewCell.swift in Sources */,
 				EC15801D25B7501C0000B4A6 /* ViewController.swift in Sources */,
 				EC15801925B7501C0000B4A6 /* AppDelegate.swift in Sources */,
+				595F5DCA26192088009A4B38 /* FetcherProtocol.swift in Sources */,
 				EC15807825B7568B0000B4A6 /* main.swift in Sources */,
+				595F5DD9262A064D009A4B38 /* PlayerViewController.swift in Sources */,
+				59692B7F2617CA5B00A67D3D /* SongsListTableViewController.swift in Sources */,
 				EC15801B25B7501C0000B4A6 /* SceneDelegate.swift in Sources */,
+				59692B702617C9D900A67D3D /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

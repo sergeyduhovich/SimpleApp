@@ -6,6 +6,7 @@ target 'SimpleApp' do
   use_frameworks!
 
   pod 'SwiftLint'
+  pod 'Kingfisher'
 
   target 'SimpleAppTests' do
     inherit! :search_paths

@@ -8,4 +8,8 @@ class ViewController: UIViewController {
 
         label.text = "label"
     }
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        let controller: UIViewController = SongsListTableViewController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
