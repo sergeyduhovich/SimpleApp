@@ -20,6 +20,8 @@ class SongTableViewCell: UITableViewCell {
     }
 
     override func awakeFromNib() {
+        super.awakeFromNib()
+
         accessoryType = .disclosureIndicator
         songLabel.font = UIFont(name: "Halvetica-Bold", size: 18)
     }
