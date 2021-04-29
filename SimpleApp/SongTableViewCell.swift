@@ -2,11 +2,11 @@ import UIKit
 import Kingfisher
 
 class SongTableViewCell: UITableViewCell {
-    @IBOutlet weak var artistLabel: UILabel!
-    @IBOutlet weak var songLabel: UILabel!
-    @IBOutlet weak var songImageView: UIImageView!
+    @IBOutlet private var artistLabel: UILabel!
+    @IBOutlet private var songLabel: UILabel!
+    @IBOutlet private var songImageView: UIImageView!
 
-    var song: SongObject? {
+    var song: Song? {
         didSet {
             artistLabel.text = song?.artist
             songLabel.text = song?.title
@@ -17,5 +17,10 @@ class SongTableViewCell: UITableViewCell {
             }
             songImageView.kf.setImage(with: urlImage)
         }
+    }
+
+    override func awakeFromNib() {
+        accessoryType = .disclosureIndicator
+        songLabel.font = UIFont(name: "Halvetica-Bold", size: 18)
     }
 }

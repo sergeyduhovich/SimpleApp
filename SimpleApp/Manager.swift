@@ -1,10 +1,10 @@
 import Foundation
 
-struct Song: Codable {
+private struct SongList: Codable {
     let songs: [Song]
 }
 
-struct SongObject: Codable {
+struct Song: Codable {
     let title: String
     let artist: String
     let year: String
@@ -29,7 +29,7 @@ class Manager: FetcherProtocol {
     }
 
     private var array: [Song] = []
-    internal var failureChance = 0.2
+    internal var failureChance = 0.0
 
     func parseSongsData() -> [Song] {
         guard let path = Bundle.main.path(forResource: "songs", ofType: "json") else {
@@ -37,12 +37,13 @@ class Manager: FetcherProtocol {
         }
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-            let song = try JSONDecoder().decode([Song].self, from: data)
-            print(song)
+            let songList = try JSONDecoder().decode(SongList.self, from: data)
+            print(songList)
+            return songList.songs
         } catch {
-            print("Data error")
+            print("Data error \(error)")
+            return []
         }
-        return []
     }
 
     func loadItems(

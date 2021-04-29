@@ -7,7 +7,7 @@ class PlayerViewController: UIViewController {
 
     private var isPlayButtonPressed = false
     public var position: Int = 0
-    public var song: [SongObject] = []
+    public var song: [Song] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

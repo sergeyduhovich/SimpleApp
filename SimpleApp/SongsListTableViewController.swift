@@ -3,14 +3,30 @@ import UIKit
 class SongsListTableViewController: UIViewController {
     private enum Constants {
         static let cellReuseIdentifier = "cellReuseIdentifier"
+        static let offset = 0
+        static let limit = 20
     }
 
     @IBOutlet var table: UITableView!
-    private var songsArray: [SongObject] = []
+    private var songsArray: [Song] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Manager.shared.loadItems(offset: Constants.offset, limit: Constants.limit) { [weak self] result in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let songList):
+                print(songList)
+                self?.songsArray = songList
+                self?.table.reloadData()
+            }
+        }
     }
 
     private func setupTable() {
@@ -53,12 +69,7 @@ extension SongsListTableViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let song = songsArray[indexPath.row]
-        cell.songLabel.text = song.title
-        cell.artistLabel.text = song.artist
-        cell.accessoryType = .disclosureIndicator
-        cell.songImageView.image = UIImage(named: song.imgUrl)
-        cell.songLabel.font = UIFont(name: "Halvetica-Bold", size: 18)
-        cell.detailTextLabel?.font = UIFont(name: "Halvetica", size: 17)
+        cell.song = song
 
         return cell
     }
