@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		135F79D3DA355E5DB06173CC /* Pods_SimpleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E428CAD5D1FFD29AE5A8C2 /* Pods_SimpleAppTests.framework */; };
 		641AD20475F1347D371412B3 /* Pods_SimpleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8E88ECA98F224F18523F33 /* Pods_SimpleApp.framework */; };
+		79F631F82712E8D0006C0AC3 /* .sourcery.yml in Resources */ = {isa = PBXBuildFile; fileRef = 79F631F72712E8D0006C0AC3 /* .sourcery.yml */; };
+		79F632002712E9A3006C0AC3 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F631FF2712E9A2006C0AC3 /* AutoMockable.generated.swift */; };
 		EC15801925B7501C0000B4A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15801825B7501C0000B4A6 /* AppDelegate.swift */; };
 		EC15801B25B7501C0000B4A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15801A25B7501C0000B4A6 /* SceneDelegate.swift */; };
 		EC15801D25B7501C0000B4A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15801C25B7501C0000B4A6 /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 		2A8E88ECA98F224F18523F33 /* Pods_SimpleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		430E0DBA358264B31A37B66B /* Pods-SimpleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleApp/Pods-SimpleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		75E428CAD5D1FFD29AE5A8C2 /* Pods_SimpleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F631F72712E8D0006C0AC3 /* .sourcery.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .sourcery.yml; sourceTree = "<group>"; };
+		79F631FF2712E9A2006C0AC3 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		DD63752B1D27581E969501B1 /* Pods-SimpleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleApp/Pods-SimpleApp.release.xcconfig"; sourceTree = "<group>"; };
 		EB12C112F5411A4E69141D32 /* Pods-SimpleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleAppTests/Pods-SimpleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC15801525B7501C0000B4A6 /* SimpleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +101,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		79F631FE2712E9A2006C0AC3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				79F631FF2712E9A2006C0AC3 /* AutoMockable.generated.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		EC15800C25B7501C0000B4A6 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +148,8 @@
 		EC15802E25B7501F0000B4A6 /* SimpleAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				79F631F72712E8D0006C0AC3 /* .sourcery.yml */,
+				79F631FE2712E9A2006C0AC3 /* Mocks */,
 				EC15808925B75AD20000B4A6 /* Setup */,
 				EC15803125B7501F0000B4A6 /* Info.plist */,
 				EC15808E25B75AEE0000B4A6 /* ViewControllerTests.swift */,
@@ -180,6 +194,7 @@
 			buildConfigurationList = EC15804225B7501F0000B4A6 /* Build configuration list for PBXNativeTarget "SimpleAppTests" */;
 			buildPhases = (
 				B93F58277126F75F2CEF89CA /* [CP] Check Pods Manifest.lock */,
+				79F631F92712E8F5006C0AC3 /* Sourcery */,
 				EC15802725B7501F0000B4A6 /* Sources */,
 				EC15802825B7501F0000B4A6 /* Frameworks */,
 				EC15802925B7501F0000B4A6 /* Resources */,
@@ -246,12 +261,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F631F82712E8D0006C0AC3 /* .sourcery.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		79F631F92712E8F5006C0AC3 /* Sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Sourcery;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/Sourcery/bin/sourcery --config SimpleAppTests/.sourcery.yml\n";
+		};
 		B93F58277126F75F2CEF89CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC15808025B758E60000B4A6 /* TestingSceneDelegate.swift in Sources */,
+				79F632002712E9A3006C0AC3 /* AutoMockable.generated.swift in Sources */,
 				EC15807225B756320000B4A6 /* TestAppDelegate.swift in Sources */,
 				EC15808F25B75AEE0000B4A6 /* ViewControllerTests.swift in Sources */,
 				EC15808425B7591C0000B4A6 /* TestingViewController.swift in Sources */,

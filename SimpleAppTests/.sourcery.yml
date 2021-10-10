@@ -1,0 +1,10 @@
+sources:
+    include:
+        - ../SimpleApp
+templates:
+    - ../Pods/Sourcery/Templates/AutoMockable.stencil
+output:
+    Mocks
+args:
+    autoMockableTestableImports:
+        - SimpleApp
