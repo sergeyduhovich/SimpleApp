@@ -521,7 +521,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB12C112F5411A4E69141D32 /* Pods-SimpleAppTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SimpleAppTests/Info.plist;
@@ -543,7 +542,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 06A07FE538095D57E5349C72 /* Pods-SimpleAppTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SimpleAppTests/Info.plist;
